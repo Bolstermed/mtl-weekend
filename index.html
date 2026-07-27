@@ -3,991 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Montréal Bachelor Weekend — September 3–7, 2026</title>
-<meta name="description" content="Two nights in Old Montréal. Two nights in Mont-Tremblant. September 3–7, 2026.">
+<title>Montréal Bachelor Weekend — Sept 3–7, 2026</title>
+<meta name="description" content="Where we're staying: Old Montréal Sept 3–5, Villa Panorama Mont-Tremblant Sept 5–7.">
 <meta property="og:title" content="Montréal Bachelor Weekend — Sept 3–7, 2026">
-<meta property="og:description" content="Two nights in Old Montréal. Two nights at Villa Panorama, Mont-Tremblant. Everything is booked — just book your flight.">
+<meta property="og:description" content="Two nights in Old Montréal. Two nights at Villa Panorama, Mont-Tremblant. Book your flight.">
 <meta property="og:image" content="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/0ee6d6c5.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d0b09; --bg2:#14110d; --card:#1a1611; --card2:#211c15;
-  --line:rgba(211,169,95,.18); --line2:rgba(255,255,255,.08);
-  --ink:#f3ecdf; --ink-soft:#cfc3ad; --muted:#9b8d73;
-  --gold:#d3a95f; --gold-soft:#e8cf9e; --city:#8fb2c9;
-  --r:18px; --r-lg:26px;
-  --shadow:0 20px 60px rgba(0,0,0,.55);
+  --bg:#0d0b09; --card:#1a1611; --line:rgba(211,169,95,.2); --line2:rgba(255,255,255,.08);
+  --ink:#f3ecdf; --soft:#cfc3ad; --muted:#9b8d73; --gold:#d3a95f; --gold2:#e8cf9e;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg); color:var(--ink);
-  font-family:'Inter',system-ui,-apple-system,sans-serif;
-  font-weight:300; line-height:1.65; -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.12}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
-a{color:inherit}
-::selection{background:rgba(211,169,95,.35)}
+.wrap{width:min(980px,92%);margin:0 auto}
 
-/* ---------- utilities ---------- */
-.wrap{width:min(1160px,92%);margin:0 auto}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:.6rem;
-  font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--gold);font-weight:500;
-}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);opacity:.7}
-.h2{font-size:clamp(2.1rem,4.6vw,3.4rem);margin:.55rem 0 1rem;color:var(--ink)}
-.lead{color:var(--ink-soft);max-width:62ch;font-size:1.02rem}
-.section{padding:clamp(4rem,9vw,7.5rem) 0;position:relative}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
-.reveal.on{opacity:1;transform:none}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  padding:.95rem 1.9rem;border-radius:999px;border:1px solid var(--gold);
-  font-family:'Inter',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
-  color:#141008;background:linear-gradient(140deg,var(--gold-soft),var(--gold));
-  text-decoration:none;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;
-  box-shadow:0 10px 30px rgba(211,169,95,.22);
-}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(211,169,95,.32)}
-.btn.ghost{background:rgba(20,17,13,.4);color:var(--gold-soft);backdrop-filter:blur(8px);box-shadow:none;border-color:rgba(211,169,95,.5)}
-.btn.ghost:hover{background:rgba(211,169,95,.12)}
-.tag{
-  display:inline-block;padding:.32rem .85rem;border-radius:999px;
-  border:1px solid var(--line);background:rgba(211,169,95,.08);
-  color:var(--gold-soft);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
-}
-.note{
-  font-size:.8rem;color:var(--muted);border-left:2px solid var(--line);
-  padding:.6rem 0 .6rem 1rem;margin-top:1.4rem;max-width:60ch;
-}
-.imgbox{position:relative;overflow:hidden;background:#241f17}
-.imgbox img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
-.imgbox:hover img{transform:scale(1.05)}
-.img-fallback{
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  width:100%;height:100%;padding:1rem;
-  background:radial-gradient(120% 120% at 20% 10%,#2c251a 0%,#191510 60%,#100d0a 100%);
-  color:var(--muted);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
-}
-
-/* ---------- nav ---------- */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:60;
-  background:rgba(13,11,9,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line2);
-  transform:translateY(-100%);transition:transform .45s ease;
-}
-nav.show{transform:none}
-.nav-in{display:flex;align-items:center;gap:1.2rem;height:58px}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold-soft);white-space:nowrap;text-decoration:none}
-.nav-links{display:flex;gap:.2rem;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.nav-links::-webkit-scrollbar{display:none}
-.nav-links a{
-  padding:.45rem .8rem;border-radius:999px;text-decoration:none;white-space:nowrap;
-  font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
-  transition:color .25s,background .25s;
-}
-.nav-links a:hover{color:var(--gold-soft);background:rgba(211,169,95,.1)}
-
-/* ---------- hero ---------- */
-header{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+/* header */
+header{position:relative;padding:0;overflow:hidden;min-height:62svh;display:flex;align-items:flex-end}
 .hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;animation:heroZoom 26s ease-in-out infinite alternate}
-@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
-.hero-veil{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(13,11,9,.5) 0%,rgba(13,11,9,.25) 40%,rgba(13,11,9,.92) 88%,var(--bg) 100%)}
-.hero-in{position:relative;z-index:2;padding:0 0 clamp(3rem,8vh,5.5rem);width:100%}
-.hero-date{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.1rem;font-weight:500}
-h1{font-size:clamp(3rem,9.5vw,6.8rem);letter-spacing:.01em;color:#fbf6ec}
-.hero-sub{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(1.2rem,2.6vw,1.75rem);color:var(--ink-soft);margin:1rem 0 1.9rem;max-width:34ch;
-}
-.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
-.count{display:flex;gap:1rem;margin-top:2.4rem;flex-wrap:wrap}
-.count div{
-  min-width:86px;text-align:center;padding:.85rem .6rem;border-radius:var(--r);
-  border:1px solid var(--line);background:rgba(13,11,9,.5);backdrop-filter:blur(8px);
-}
-.count b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:500;color:var(--gold-soft)}
-.count span{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,9,.45),rgba(13,11,9,.35) 40%,var(--bg) 96%)}
+.hero-in{position:relative;z-index:2;width:100%;padding:4.5rem 0 2.6rem;text-align:center}
+.hero-in .date{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2);font-weight:500}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.6rem,7.5vw,4.6rem);line-height:1.08;margin:.5rem 0 .4rem;color:#fbf6ec}
+.hero-in p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--soft)}
 
-/* ---------- glance timeline ---------- */
-.glance{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem;margin-top:2.6rem}
-.day-card{
-  border:1px solid var(--line2);border-radius:var(--r);background:var(--card);
-  padding:1.4rem 1.2rem;cursor:pointer;transition:border-color .3s,transform .3s,background .3s;
-  text-align:left;color:inherit;font:inherit;position:relative;
-}
-.day-card:hover{border-color:var(--line);transform:translateY(-4px);background:var(--card2)}
-.day-card .dnum{font-size:.68rem;letter-spacing:.24em;color:var(--muted);text-transform:uppercase}
-.day-card h3{font-size:1.45rem;color:var(--gold-soft);margin:.35rem 0 .2rem}
-.day-card p{font-size:.83rem;color:var(--ink-soft)}
-.day-card::after{content:"↓";position:absolute;top:1.2rem;right:1.2rem;color:var(--gold);opacity:.6;font-size:.85rem}
-
-/* ---------- itinerary ---------- */
-.day{border-top:1px solid var(--line2)}
-.day-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.day-grid.flip{direction:rtl}.day-grid.flip>*{direction:ltr}
-.day-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3.1}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0}
-.chips span{
-  padding:.42rem .9rem;border-radius:999px;font-size:.78rem;color:var(--ink-soft);
-  border:1px solid var(--line2);background:rgba(255,255,255,.03);
-}
-.mini-card{
-  margin-top:1.6rem;border:1px solid var(--line);border-radius:var(--r);
-  background:linear-gradient(140deg,rgba(211,169,95,.1),rgba(211,169,95,.03));
-  padding:1.2rem 1.4rem;
-}
-.mini-card b{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
-.mini-card p{font-size:.9rem;color:var(--ink-soft)}
-details.acc{border:1px solid var(--line2);border-radius:var(--r);background:var(--card);margin-top:.8rem;overflow:hidden}
-details.acc summary{
-  list-style:none;cursor:pointer;padding:1.05rem 1.3rem;display:flex;justify-content:space-between;align-items:center;
-  font-size:.92rem;font-weight:500;color:var(--ink);
-}
-details.acc summary::-webkit-details-marker{display:none}
-details.acc summary::after{content:"+";font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);transition:transform .3s}
-details.acc[open] summary::after{transform:rotate(45deg)}
-details.acc .acc-in{padding:0 1.3rem 1.2rem;color:var(--ink-soft);font-size:.9rem}
-
-/* ---------- transition band ---------- */
-.shift{
-  position:relative;padding:clamp(5rem,13vw,9rem) 0;text-align:center;overflow:hidden;
-  background:linear-gradient(120deg,#101820 0%,#0d0b09 46%,#1b140b 100%);
-  border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);
-}
-.shift::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(60% 90% at 12% 50%,rgba(143,178,201,.14),transparent 60%),
-             radial-gradient(60% 90% at 88% 50%,rgba(211,169,95,.16),transparent 60%);}
-.shift-line{position:relative;font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,5.4vw,3.6rem);color:#f7f1e4}
-.shift-line .c{color:var(--city)} .shift-line .m{color:var(--gold-soft)}
-.shift-line .arrow{display:inline-block;margin:0 1.2rem;color:var(--muted);font-size:.7em;transform:translateY(-.12em)}
-.shift p{position:relative;margin-top:1rem;color:var(--muted);font-size:.92rem;letter-spacing:.18em;text-transform:uppercase}
-
-/* ---------- stay cards ---------- */
-.stay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.6rem}
-.stay-card{
-  border:1px solid var(--line2);border-radius:var(--r-lg);background:var(--card);
-  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
-  transition:border-color .3s,transform .35s;
-}
-.stay-card:hover{border-color:var(--line);transform:translateY(-5px)}
-.stay-hero{aspect-ratio:16/10;position:relative}
-.stay-hero .badge{
-  position:absolute;top:1rem;left:1rem;z-index:2;
-  padding:.4rem .95rem;border-radius:999px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
-  background:rgba(13,11,9,.72);border:1px solid var(--line);color:var(--gold-soft);backdrop-filter:blur(6px);
-}
-.stay-hero .label{
-  position:absolute;bottom:1rem;left:1rem;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1.05rem;color:#f5efe2;text-shadow:0 2px 14px rgba(0,0,0,.6);
-}
-.stay-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,8,6,.72))}
-.stay-body{padding:1.7rem 1.6rem 1.9rem;display:flex;flex-direction:column;flex:1}
-.stay-body h3{font-size:1.9rem;color:var(--ink)}
-.stay-body .loc{font-size:.83rem;color:var(--muted);margin:.25rem 0 1rem}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .9rem;margin:0 0 1.2rem;list-style:none}
-.facts li{font-size:.86rem;color:var(--ink-soft);display:flex;gap:.55rem;align-items:baseline}
+/* stay cards */
+.stays{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;padding:2.4rem 0 0}
+.card{border:1px solid var(--line2);border-radius:22px;background:var(--card);overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.photo{aspect-ratio:16/10;position:relative;background:#241f17}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .badge{position:absolute;top:.9rem;left:.9rem;padding:.38rem .9rem;border-radius:999px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;background:rgba(13,11,9,.75);border:1px solid var(--line);color:var(--gold2);backdrop-filter:blur(6px)}
+.body{padding:1.5rem 1.5rem 1.7rem}
+.body h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.75rem;color:var(--ink)}
+.body .loc{font-size:.82rem;color:var(--muted);margin:.2rem 0 1rem}
+.facts{list-style:none;margin-bottom:1.2rem}
+.facts li{font-size:.88rem;color:var(--soft);padding:.32rem 0;display:flex;gap:.55rem}
 .facts li::before{content:"·";color:var(--gold);font-weight:700}
-.stay-body .btn{margin-top:auto;align-self:flex-start}
-.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem;margin:0 0 1.4rem}
-.thumbs .imgbox{aspect-ratio:1/1;border-radius:10px;cursor:pointer}
+.facts b{color:var(--gold2);font-weight:500}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem;margin-bottom:1.3rem}
+.thumbs a{display:block;border-radius:10px;overflow:hidden;aspect-ratio:1/1;background:#241f17}
+.thumbs img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.thumbs a:hover img{transform:scale(1.06)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.7rem;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(140deg,var(--gold2),var(--gold));color:#141008;font-size:.8rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
 
-/* ---------- villa feature ---------- */
-.villa-hero{
-  border-radius:var(--r-lg);overflow:hidden;position:relative;box-shadow:var(--shadow);
-  aspect-ratio:21/10;min-height:320px;margin-top:2.6rem;
-}
-.villa-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,8,6,.8))}
-.villa-hero .vh-cap{position:absolute;z-index:2;bottom:1.6rem;left:1.8rem;right:1.8rem}
-.villa-hero .vh-cap h3{font-size:clamp(1.7rem,3.4vw,2.6rem);color:#faf4e8}
-.villa-hero .vh-cap p{color:var(--ink-soft);font-size:.92rem}
-.amen{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.6rem}
-.amen div{
-  border:1px solid var(--line2);border-radius:var(--r);background:var(--card);
-  padding:1.05rem 1.1rem;font-size:.85rem;color:var(--ink-soft);
-}
-.amen b{display:block;color:var(--gold-soft);font-weight:500;font-size:.95rem;margin-bottom:.15rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem}
+/* times strip */
+.times{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:2.2rem 0 0}
+.times div{border:1px solid var(--line2);border-radius:14px;background:var(--card);padding:.95rem .5rem;text-align:center}
+.times b{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;font-weight:600}
+.times span{font-size:.85rem;color:var(--soft)}
 
-/* ---------- gallery ---------- */
-.gal{columns:3;column-gap:.8rem;margin-top:2.4rem}
-.gal .imgbox{border-radius:14px;margin-bottom:.8rem;cursor:zoom-in;break-inside:avoid}
-.gal img{height:auto}
-.lightbox{
-  position:fixed;inset:0;z-index:100;background:rgba(8,6,4,.94);display:none;
-  align-items:center;justify-content:center;flex-direction:column;padding:2rem;
-}
-.lightbox.open{display:flex}
-.lightbox img{max-width:min(1100px,94vw);max-height:78vh;object-fit:contain;border-radius:10px}
-.lb-bar{display:flex;gap:1rem;margin-top:1.1rem;align-items:center;color:var(--muted);font-size:.85rem}
-.lb-btn{
-  background:rgba(255,255,255,.06);border:1px solid var(--line2);color:var(--ink);
-  width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:background .25s;
-}
-.lb-btn:hover{background:rgba(211,169,95,.2)}
-.lb-x{position:absolute;top:1.2rem;right:1.4rem}
+/* footer */
+footer{text-align:center;padding:3.2rem 0 3.4rem}
+footer h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.6rem);color:#fbf5e9;margin-bottom:.5rem}
+footer p{color:var(--soft);font-size:.92rem;margin-bottom:1.4rem}
+footer a.guide{color:var(--gold2);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+footer .fine{margin-top:2.2rem;font-size:.68rem;color:var(--muted)}
 
-/* ---------- concierge ---------- */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.4rem}
-.svc div{border:1px solid var(--line2);border-radius:var(--r);background:var(--card);padding:1.25rem 1.3rem}
-.svc b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--gold-soft);margin-bottom:.3rem}
-.svc p{font-size:.84rem;color:var(--ink-soft)}
-.svc small{display:block;margin-top:.55rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(8,6,4,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:1.5rem;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:88vh;object-fit:contain;border-radius:10px}
 
-/* ---------- checklists ---------- */
-.check{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem;margin-top:2rem}
-.check label{
-  display:flex;gap:.8rem;align-items:center;padding:.75rem 1rem;border-radius:12px;
-  border:1px solid var(--line2);background:var(--card);cursor:pointer;font-size:.9rem;color:var(--ink-soft);
-  transition:border-color .25s,opacity .25s;
-}
-.check label:hover{border-color:var(--line)}
-.check input{
-  appearance:none;width:20px;height:20px;flex:0 0 20px;border-radius:6px;border:1.5px solid var(--muted);
-  display:grid;place-items:center;cursor:pointer;transition:all .2s;
-}
-.check input:checked{background:var(--gold);border-color:var(--gold)}
-.check input:checked::after{content:"✓";color:#141008;font-size:.8rem;font-weight:700}
-.check input:checked+span{opacity:.55;text-decoration:line-through}
-
-/* ---------- activities ---------- */
-.act{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.4rem}
-.act-card{border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card);transition:transform .3s,border-color .3s}
-.act-card:hover{transform:translateY(-4px);border-color:var(--line)}
-.act-img{aspect-ratio:16/9;position:relative}
-.act-img .img-fallback{font-size:.68rem}
-.act-body{padding:1.1rem 1.2rem 1.3rem}
-.act-body h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--ink)}
-.act-body p{font-size:.83rem;color:var(--ink-soft);margin:.3rem 0 .55rem}
-.act-body small{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.season{display:inline-block;margin-top:.5rem;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:#c8a25e;border:1px dashed rgba(211,169,95,.4);border-radius:8px;padding:.25rem .6rem}
-
-/* ---------- logistics / maps ---------- */
-.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2.4rem}
-.dash div{border:1px solid var(--line2);border-radius:var(--r);background:var(--card);padding:1.3rem 1.3rem}
-.dash b{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
-.dash h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--ink);margin-bottom:.15rem}
-.dash p{font-size:.83rem;color:var(--ink-soft)}
-.maps{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2.4rem}
-.map-card{border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--card)}
-.map-card iframe{width:100%;height:250px;border:0;display:block;filter:grayscale(.35) contrast(1.02)}
-.map-card p{padding:.8rem 1.1rem;font-size:.83rem;color:var(--ink-soft)}
-.map-card p b{color:var(--gold-soft);font-weight:500}
-
-/* ---------- two tracks ---------- */
-.tracks{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.4rem}
-.track{border:1px solid var(--line2);border-radius:var(--r-lg);background:var(--card);padding:1.8rem 1.7rem}
-.track h3{font-size:1.8rem;color:var(--gold-soft);margin-bottom:.7rem}
-.track ul{list-style:none;columns:2;column-gap:1.4rem}
-.track li{font-size:.88rem;color:var(--ink-soft);padding:.3rem 0;break-inside:avoid;display:flex;gap:.5rem}
-.track li::before{content:"—";color:var(--gold);opacity:.7}
-
-/* ---------- night section ---------- */
-.night{position:relative;overflow:hidden}
-.night-bg{position:absolute;inset:0}
-.night-bg img{width:100%;height:100%;object-fit:cover}
-.night-veil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(13,11,9,.62) 30%,rgba(13,11,9,.62) 70%,var(--bg) 100%)}
-.night-in{position:relative;z-index:2;text-align:center;padding:clamp(6rem,14vw,10rem) 0}
-.night-in h2{font-size:clamp(2.2rem,5.5vw,4rem);color:#fbf5e9;text-shadow:0 4px 30px rgba(0,0,0,.6)}
-.night-in p{color:var(--ink-soft);max-width:52ch;margin:1rem auto 0;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-.night-chips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-top:1.8rem}
-.night-chips span{padding:.45rem 1rem;border-radius:999px;font-size:.78rem;border:1px solid rgba(255,255,255,.25);background:rgba(13,11,9,.5);backdrop-filter:blur(6px);color:var(--ink-soft)}
-
-/* ---------- quick links fab ---------- */
-.fab{
-  position:fixed;right:1.1rem;bottom:1.1rem;z-index:70;
-  width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);
-  background:linear-gradient(140deg,var(--gold-soft),var(--gold));color:#141008;
-  font-size:1.25rem;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.5);
-  display:grid;place-items:center;transition:transform .3s;
-}
-.fab:hover{transform:scale(1.06)}
-.fab-panel{
-  position:fixed;right:1.1rem;bottom:5.4rem;z-index:70;width:min(300px,86vw);
-  border:1px solid var(--line);border-radius:var(--r);background:rgba(20,17,13,.96);backdrop-filter:blur(14px);
-  padding:.7rem;display:none;box-shadow:var(--shadow);
-}
-.fab-panel.open{display:block}
-.fab-panel a{
-  display:flex;justify-content:space-between;align-items:center;text-decoration:none;
-  padding:.75rem .9rem;border-radius:12px;font-size:.86rem;color:var(--ink-soft);transition:background .2s;
-}
-.fab-panel a:hover{background:rgba(211,169,95,.12);color:var(--gold-soft)}
-.fab-panel a span{color:var(--gold);font-size:.8rem}
-
-/* ---------- CTA / footer ---------- */
-.cta{
-  text-align:center;padding:clamp(6rem,13vw,9.5rem) 0;
-  background:radial-gradient(70% 100% at 50% 0%,rgba(211,169,95,.12),transparent 70%);
-  border-top:1px solid var(--line2);
-}
-.cta h2{font-size:clamp(2.6rem,7vw,5rem);color:#fbf5e9}
-.cta p{color:var(--ink-soft);margin:1.1rem auto 2.2rem;max-width:46ch}
-.cta-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
-footer{padding:2.6rem 0 7rem;text-align:center;color:var(--muted);font-size:.75rem;border-top:1px solid var(--line2)}
-footer p{max-width:70ch;margin:0 auto .4rem}
-
-/* ---------- responsive ---------- */
-@media(max-width:960px){
-  .glance{grid-template-columns:1fr 1fr}
-  .day-grid,.stay-grid,.tracks,.maps{grid-template-columns:1fr}
-  .day-grid.flip{direction:ltr}
-  .amen,.svc,.act{grid-template-columns:1fr 1fr}
-  .dash{grid-template-columns:1fr 1fr}
-  .gal{columns:2}
-  .villa-hero{aspect-ratio:4/3}
-}
-@media(max-width:560px){
-  .glance{grid-template-columns:1fr}
-  .amen,.svc,.act,.check,.dash{grid-template-columns:1fr}
-  .gal{columns:2}
-  .track ul{columns:1}
-  .count div{min-width:72px}
-  .facts{grid-template-columns:1fr}
+@media(max-width:760px){
+  .stays{grid-template-columns:1fr}
+  .times{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════════ NAV ══════════════ -->
-<nav id="nav" aria-label="Section navigation">
-  <div class="wrap nav-in">
-    <a class="nav-brand" href="#top">MTL ’26</a>
-    <div class="nav-links">
-      <a href="#glance">Overview</a>
-      <a href="#itinerary">Itinerary</a>
-      <a href="#stay">Hotel Suites</a>
-      <a href="#villa">Villa Panorama</a>
-      <a href="#activities">Activities</a>
-      <a href="#logistics">Logistics</a>
-      <a href="#packing">Packing</a>
-      <a href="#links">Links</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ══════════════ HERO ══════════════ -->
-<header id="top">
+<header>
   <div class="hero-bg">
-    <!-- Real photo from the Old Montréal VRBO listing (streetscape, 0.2 mi from the property) -->
-    <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/0ee6d6c5.jpg"
-         alt="Cobblestone street in Old Montréal near the property" referrerpolicy="no-referrer"
-         onerror="imgFail(this,'Old Montréal')">
+    <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/0ee6d6c5.jpg" alt="Old Montréal street near the hotel" referrerpolicy="no-referrer">
   </div>
   <div class="hero-veil"></div>
   <div class="wrap hero-in">
-    <p class="hero-date">September 3–7, 2026 · Montréal & Mont-Tremblant</p>
-    <h1>Montréal<br>Bachelor Weekend</h1>
-    <p class="hero-sub">Two nights in Old Montréal. Two nights in Mont-Tremblant. Everything’s booked — you just need a flight.</p>
-    <div class="hero-cta">
-      <a class="btn" href="#glance">See the Plan ↓</a>
-      <a class="btn ghost" href="#stay">Where We’re Staying</a>
-    </div>
-    <div class="count" id="count" aria-label="Countdown to September 3, 2026">
-      <div><b id="cd">–</b><span>Days</span></div>
-      <div><b id="ch">–</b><span>Hours</span></div>
-      <div><b id="cm">–</b><span>Minutes</span></div>
-      <div><b id="cs">–</b><span>Seconds</span></div>
-    </div>
+    <p class="date">September 3–7, 2026</p>
+    <h1>Montréal Bachelor Weekend</h1>
+    <p>Two nights in Old Montréal · Two nights in Mont-Tremblant</p>
   </div>
 </header>
 
-<!-- ══════════════ TRIP AT A GLANCE ══════════════ -->
-<section class="section" id="glance">
-  <div class="wrap">
-    <span class="eyebrow reveal">Trip at a Glance</span>
-    <h2 class="h2 reveal">Five days. Two stops.</h2>
-    <p class="lead reveal">Thursday and Friday: Old Montréal — dinners, bars, casino. Saturday through Monday: a private mountain house in Tremblant — pool, hot tub, grill, golf. Tap a day for details.</p>
-    <div class="glance reveal">
-      <a class="day-card" href="#thu"><span class="dnum">Thu · Sep 3</span><h3>Arrive & Go Out</h3><p>Land at YUL, check in, out in the city that night.</p></a>
-      <a class="day-card" href="#fri"><span class="dnum">Fri · Sep 4</span><h3>Full Montréal Day</h3><p>Old Montréal, group dinner, bars, casino.</p></a>
-      <a class="day-card" href="#sat"><span class="dnum">Sat · Sep 5</span><h3>City to Mountains</h3><p>Private van to Villa Panorama.</p></a>
-      <a class="day-card" href="#sun"><span class="dnum">Sun · Sep 6</span><h3>Tremblant Day</h3><p>Golf, explore, or stay at the house.</p></a>
-      <a class="day-card" href="#mon"><span class="dnum">Mon · Sep 7</span><h3>Head Home</h3><p>Van back to YUL, fly out.</p></a>
-    </div>
-  </div>
-</section>
+<div class="wrap">
+  <div class="stays">
 
-<!-- ══════════════ THURSDAY ══════════════ -->
-<section class="section day" id="thu">
-  <div class="wrap" id="itinerary">
-    <div class="day-grid">
-      <div>
-        <span class="eyebrow reveal">Thursday · September 3</span>
-        <h2 class="h2 reveal">Fly Into Montréal</h2>
-        <p class="lead reveal">Everyone flies into <strong>Montréal–Trudeau International (YUL)</strong> — about 26 minutes from the hotel. <strong>Land as early as you can.</strong> We’re going out Thursday night, with or without you.</p>
-        <div class="chips reveal">
-          <span>✈ Land at YUL</span><span>Check-in from 4:00 PM</span><span>Get settled</span>
-          <span>Group dinner</span><span>Drinks</span><span>Bars</span><span>Casino</span><span>Late night</span>
-        </div>
-        <div class="mini-card reveal">
-          <b>Recommended Arrival</b>
-          <p>Book a flight that lands early enough to check in (4:00 PM), get ready and make dinner with the group. Airport pickup details will be posted once the flight list is in.</p>
-        </div>
+    <!-- Hotel Suites -->
+    <article class="card">
+      <div class="photo">
+        <span class="badge">Thu Sept 3 – Sat Sept 5</span>
+        <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/ee663d34.jpg" alt="The hotel in Old Montréal" referrerpolicy="no-referrer" data-lb>
       </div>
-      <div class="day-photo imgbox reveal">
-        <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/a4b9175e.jpg"
-             alt="The bar at the Montréal property — long counter with stools and a full back bar" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Hotel bar — photo from the VRBO listing')">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ FRIDAY ══════════════ -->
-<section class="section day" id="fri">
-  <div class="wrap">
-    <div class="day-grid flip">
-      <div>
-        <span class="eyebrow reveal">Friday · September 4</span>
-        <h2 class="h2 reveal">A Full Day in Montréal</h2>
-        <p class="lead reveal">The hotel is in the center of Old Montréal — Notre-Dame Basilica, Place d’Armes and the Old Port are a two-minute walk from the door, with restaurants and bars everywhere. Friday is flexible: a menu of options, not an hour-by-hour schedule.</p>
-        <details class="acc reveal" open>
-          <summary>Daytime</summary>
-          <div class="acc-in">Brunch · walk Old Montréal · Notre-Dame Basilica · the waterfront and Old Port · cafés · group lunch · afternoon drinks.</div>
-        </details>
-        <details class="acc reveal">
-          <summary>Evening</summary>
-          <div class="acc-in">Group dinner · cocktail bars · lounge or club · Casino de Montréal (10–15 min cab from Old Montréal) · late-night food.</div>
-        </details>
-        <p class="note reveal">Final reservations and nightlife picks will be added closer to the trip.</p>
-      </div>
-      <div class="day-photo imgbox reveal">
-        <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/0690e92c.jpg"
-             alt="The property’s outdoor terrace café surrounded by greenery in Old Montréal" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Terrace — photo from the VRBO listing')">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ TRANSITION ══════════════ -->
-<section class="shift" id="sat">
-  <div class="wrap">
-    <div class="shift-line reveal"><span class="c">City energy</span><span class="arrow">⟶</span><span class="m">Mountain reset</span></div>
-    <p class="reveal">Saturday, September 5 · Private van · ~2 hours, depending on traffic</p>
-  </div>
-</section>
-
-<!-- ══════════════ SATURDAY ══════════════ -->
-<section class="section day">
-  <div class="wrap">
-    <div class="day-grid">
-      <div>
-        <span class="eyebrow reveal">Saturday · September 5</span>
-        <h2 class="h2 reveal">City to Mountains</h2>
-        <p class="lead reveal">Saturday morning: breakfast, pack up. A private van picks the group up in Old Montréal and heads north to <strong>Villa Panorama</strong> in Mont-Tremblant — about two hours, depending on traffic — with a grocery and liquor stop on the way.</p>
-        <div class="chips reveal">
-          <span>Breakfast / brunch</span><span>Pack up</span><span>Private van pickup</span>
-          <span>Grocery + liquor stop</span><span>Villa check-in</span><span>Pool · hot tub · grill</span>
-        </div>
-        <div class="mini-card reveal">
-          <b>The Route</b>
-          <p>Old Montréal → Villa Panorama, 425 Chemin de Cassiopée, Mont-Tremblant. Exact pickup time will be posted here once confirmed.</p>
-        </div>
-      </div>
-      <div class="day-photo map-card reveal" style="aspect-ratio:auto">
-        <iframe title="Route: Old Montréal to Villa Panorama, Mont-Tremblant" loading="lazy" style="height:100%;min-height:340px"
-          src="https://maps.google.com/maps?saddr=414+Rue+Saint-Sulpice,+Montr%C3%A9al,+QC&daddr=425+Chemin+de+Cassiop%C3%A9e,+Mont-Tremblant,+QC&output=embed"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ WHERE WE'RE STAYING ══════════════ -->
-<section class="section" id="stay">
-  <div class="wrap">
-    <span class="eyebrow reveal">Where We’re Staying</span>
-    <h2 class="h2 reveal">Two bases. Both booked.</h2>
-    <p class="lead reveal">Real photos and details from the actual listings.</p>
-
-    <div class="stay-grid">
-      <!-- ─── Old Montréal ─── -->
-      <article class="stay-card reveal">
-        <div class="stay-hero imgbox">
-          <span class="badge">Sept 3–5</span>
-          <span class="label">The city base</span>
-          <img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/ee663d34.jpg"
-               alt="Historic stone façade of the Old Montréal property" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Old Montréal property — VRBO listing photo')">
-        </div>
-        <div class="stay-body">
-          <h3>The Hotel Suites</h3>
-          <p class="loc">414 Rue Saint-Sulpice · Old Montréal · steps from Notre-Dame Basilica</p>
-          <ul class="facts">
-            <li>4 private suites, ~600 sq ft each</li>
-            <li>Sleeps up to 16 · booked for 12</li>
-            <li>Each suite: 2 queens + sofa bed, private bath</li>
-            <li>Kitchenette in every suite</li>
-            <li>Free WiFi · A/C · daily cleaning included</li>
-            <li>Breakfast available (7–11 wkdy · 8–1 wknd)</li>
-            <li>Old Port & Place d’Armes: 2-min walk</li>
-            <li>Restaurants & bars right outside the door</li>
-            <li>Check-in 4:00 PM · valet parking $45/day</li>
-            <li>YUL airport: ~26-min drive</li>
-          </ul>
-          <div class="thumbs">
-            <div class="imgbox"><img data-lb="mtl" src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/f89b7766.jpg" alt="Restaurant at the Montréal property" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="mtl" src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/a6de7883.jpg" alt="Suite bedroom with queen bed" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="mtl" src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/579f2ab9.jpg" alt="Lobby with chandelier" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="mtl" src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/174cf0aa.jpg" alt="Suite bathroom with glass shower and tub" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-          </div>
-          <a class="btn" href="https://vrbo.onelink.me/ItNz/57d9bn6y" target="_blank" rel="noopener">View the Hotel Suites</a>
-        </div>
-      </article>
-
-      <!-- ─── Villa Panorama ─── -->
-      <article class="stay-card reveal">
-        <div class="stay-hero imgbox">
-          <span class="badge">Sept 5–7</span>
-          <span class="label">The mountain reset</span>
-          <img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577205.jpeg"
-               alt="Villa Panorama’s hot tub and heated pool overlooking the Laurentian valley" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Villa Panorama — Tremblant Living listing photo')">
-        </div>
-        <div class="stay-body">
-          <h3>Villa Panorama 425</h3>
-          <p class="loc">425 Chemin de Cassiopée, Mont-Tremblant · Versant Soleil, slope-side</p>
-          <ul class="facts">
-            <li>8 bedrooms · 8.5 baths · sleeps 22+</li>
-            <li>5 king suites with ensuite baths</li>
-            <li>Year-round heated outdoor pool</li>
-            <li>Private outdoor hot tub</li>
-            <li>Game room with pool table</li>
-            <li>Gourmet kitchen · dual fridges & dishwashers</li>
-            <li>14-seat dining + island seating</li>
-            <li>Two living rooms · fireplaces</li>
-            <li>Sonos sound system · smart TVs</li>
-            <li>4-season BBQ · terraces · valley views</li>
-            <li>Garage w/ EV chargers + parking for 5+</li>
-            <li>~5 min to Tremblant village (per listing)</li>
-          </ul>
-          <div class="thumbs">
-            <div class="imgbox"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166645556.jpeg" alt="Villa Panorama exterior and driveway" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_173046151.png" alt="Pool deck with mountain views" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315282.jpeg" alt="Living room with pool table and fireplace" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-            <div class="imgbox"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315275.jpeg" alt="Kitchen and dining space" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-          </div>
-          <a class="btn" href="https://www.tremblantliving.ca/property/villa-panorama-tremblant/" target="_blank" rel="noopener">Explore Villa Panorama</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ VILLA FEATURE + GALLERY ══════════════ -->
-<section class="section" id="villa">
-  <div class="wrap">
-    <span class="eyebrow reveal">The Mountain House</span>
-    <h2 class="h2 reveal">Villa Panorama</h2>
-    <p class="lead reveal">A slope-side house on Tremblant’s Versant Soleil: eight bedrooms, 8.5 bathrooms, a year-round heated pool, a hot tub over the valley, a game room and space for the whole group — real beds for everyone.</p>
-
-    <div class="villa-hero imgbox reveal">
-      <img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315261.jpeg"
-           alt="Villa Panorama great room — long dining table, open kitchen and valley views" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Villa Panorama great room — Tremblant Living listing photo')">
-      <div class="vh-cap">
-        <h3>Room for the whole group</h3>
-        <p>8 bedrooms · 8.5 baths · heated pool · hot tub · game room · Sonos throughout</p>
-      </div>
-    </div>
-
-    <div class="amen">
-      <div class="reveal"><b>Sleeps 22+</b>5 king suites with ensuite bathrooms, plus king, bunk and queen rooms.</div>
-      <div class="reveal"><b>Heated Pool & Hot Tub</b>Private, outdoor, year-round — both facing the valley.</div>
-      <div class="reveal"><b>Game Room</b>Pool table, two living rooms, smart TVs and Sonos throughout.</div>
-      <div class="reveal"><b>Chef’s Kitchen</b>Gourmet kitchen with dual fridges and dishwashers, plus a 4-season BBQ.</div>
-    </div>
-
-    <div class="gal" id="gallery">
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577205.jpeg" alt="Hot tub and pool over the valley" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_173046151.png" alt="Pool deck with mountain views" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315261.jpeg" alt="Great room and dining" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166645556.jpeg" alt="Exterior and garage" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315282.jpeg" alt="Living room with pool table" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315275.jpeg" alt="Kitchen and dining with deck access" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315284.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315274.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315263.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577216.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315267.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-      <div class="imgbox reveal"><img data-lb="villa" src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577214.jpeg" alt="Villa Panorama — photo from the Tremblant Living listing" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this,'Listing photo')"></div>
-    </div>
-    <p class="note reveal">All villa photos come straight from the official Tremblant Living listing gallery. Tap any photo to view it full-screen.</p>
-  </div>
-</section>
-
-<!-- ══════════════ CONCIERGE ══════════════ -->
-<section class="section" id="concierge">
-  <div class="wrap">
-    <span class="eyebrow reveal">We’ve Got You Covered</span>
-    <h2 class="h2 reveal">The house gets stocked before we arrive.</h2>
-    <p class="lead reveal">Tremblant Living runs a concierge team seven days a week. Food, drinks and essentials will be stocked before check-in, and they can arrange everything below during the stay.</p>
-    <div class="svc">
-      <div class="reveal"><b>Fridge Fill & Groceries</b><p>Beer, food and essentials stocked before check-in.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>Private Chef & Catering</b><p>In-chalet dinners prepared on site.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>Restaurant Reservations</b><p>Recommendations and bookings around Tremblant.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>Activity Bookings</b><p>Golf, gondola, water and mountain activities arranged.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>In-Chalet Massage</b><p>Wellness bookings at the villa.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>Housekeeping</b><p>Daily housekeeping during the stay.</p><small>Offered by Tremblant Living</small></div>
-      <div class="reveal"><b>Drinks & Special Requests</b><p>Specific bottles, cigars or gear for Saturday night.</p><small>Available upon request, subject to availability and confirmation</small></div>
-      <div class="reveal"><b>Transportation</b><p>Private van transfers and local rides.</p><small>Available upon request, subject to availability and confirmation</small></div>
-      <div class="reveal"><b>Anything Else</b><p>If it would make the weekend better, ask.</p><small>Available upon request, subject to availability and confirmation</small></div>
-    </div>
-
-    <h3 class="serif reveal" style="font-size:1.9rem;margin-top:3.4rem">Tell us what to stock</h3>
-    <p class="lead reveal" style="font-size:.92rem">Check what you drink and eat, then send your picks in the group chat so the stock list is right.</p>
-    <div class="check" data-store="prefs">
-      <label><input type="checkbox"><span>Beer</span></label>
-      <label><input type="checkbox"><span>Wine</span></label>
-      <label><input type="checkbox"><span>Bourbon / whiskey</span></label>
-      <label><input type="checkbox"><span>Tequila / mixers</span></label>
-      <label><input type="checkbox"><span>Snacks</span></label>
-      <label><input type="checkbox"><span>Breakfast food</span></label>
-      <label><input type="checkbox"><span>Steaks & grill food</span></label>
-      <label><input type="checkbox"><span>Dietary restriction / allergy — message Keegan</span></label>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ SATURDAY NIGHT ══════════════ -->
-<section class="night">
-  <div class="night-bg">
-    <img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577205.jpeg" alt="" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">
-  </div>
-  <div class="night-veil"></div>
-  <div class="wrap night-in">
-    <span class="eyebrow reveal">Saturday Night · September 5</span>
-    <h2 class="reveal">No Reservations. No Rush.<br>Just the House.</h2>
-    <p class="reveal">Steaks on the grill, drinks on the deck, football on, poker after dark, pool and hot tub going all night. Saturday night is at the house.</p>
-    <div class="night-chips reveal">
-      <span>Heated pool</span><span>Hot tub</span><span>Steaks</span><span>Bourbon</span>
-      <span>Football</span><span>Poker</span><span>Cigars (outside)</span><span>Music on the Sonos</span><span>Mountain views</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ SUNDAY ══════════════ -->
-<section class="section day" id="sun">
-  <div class="wrap">
-    <span class="eyebrow reveal">Sunday · September 6</span>
-    <h2 class="h2 reveal">The Chill Day</h2>
-    <p class="lead reveal">Sunday is open. Golf, explore Tremblant, or stay at the house — nobody has to do the same thing. Split up and regroup at the house in the evening.</p>
-    <div class="tracks">
-      <div class="track reveal">
-        <h3>Stay at the Villa</h3>
-        <ul>
-          <li>Sleep in</li><li>Big breakfast</li><li>Pool</li><li>Hot tub</li>
-          <li>Games & football</li><li>Grill</li><li>Drinks</li><li>Cook together</li>
-          <li>Sunset on the deck</li><li>Relax</li>
+      <div class="body">
+        <h2>The Hotel Suites</h2>
+        <p class="loc">414 Rue Saint-Sulpice · Old Montréal</p>
+        <ul class="facts">
+          <li><b>Check-in:</b>&nbsp;Thursday, Sept 3 · from 4:00 PM</li>
+          <li>4 private suites · sleeps 16</li>
+          <li>Each suite: 2 queens + sofa bed, own bath</li>
+          <li>2-min walk to Notre-Dame Basilica & Old Port</li>
+          <li>YUL airport ≈ 26 min away</li>
         </ul>
+        <div class="thumbs">
+          <a href="#" data-lb-t><img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/a6de7883.jpg" alt="Suite bedroom" referrerpolicy="no-referrer"></a>
+          <a href="#" data-lb-t><img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/f89b7766.jpg" alt="Hotel restaurant" referrerpolicy="no-referrer"></a>
+          <a href="#" data-lb-t><img src="https://media.vrbo.com/lodging/122000000/121470000/121466000/121465901/a4b9175e.jpg" alt="Hotel bar" referrerpolicy="no-referrer"></a>
+        </div>
+        <a class="btn" href="https://vrbo.onelink.me/ItNz/57d9bn6y" target="_blank" rel="noopener">View the Listing</a>
       </div>
-      <div class="track reveal">
-        <h3>Explore Tremblant</h3>
-        <ul>
-          <li>Golf</li><li>Hiking</li><li>Pedestrian village</li><li>Parc Plage beach</li>
-          <li>Scenic gondola</li><li>Ziplining*</li><li>Mountain coaster*</li><li>Mountain biking</li>
-          <li>Kayaking</li><li>Restaurants & bars</li>
+    </article>
+
+    <!-- Villa Panorama -->
+    <article class="card">
+      <div class="photo">
+        <span class="badge">Sat Sept 5 – Mon Sept 7</span>
+        <img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166577205.jpeg" alt="Villa Panorama hot tub and pool over the valley" referrerpolicy="no-referrer" data-lb>
+      </div>
+      <div class="body">
+        <h2>Villa Panorama</h2>
+        <p class="loc">425 Chemin de Cassiopée · Mont-Tremblant</p>
+        <ul class="facts">
+          <li><b>Arrive:</b>&nbsp;Saturday, Sept 5 · private van (~2 hrs)</li>
+          <li>8 bedrooms · 8.5 baths · sleeps 22+</li>
+          <li>Heated pool · hot tub · mountain views</li>
+          <li>Game room, pool table, big kitchen, BBQ</li>
+          <li><b>Check-out:</b>&nbsp;Monday, Sept 7 · 11:00 AM</li>
         </ul>
-      </div>
-    </div>
-    <p class="note reveal">*Expected seasonal availability — September schedules for 2026 haven’t been published yet. We’ll confirm what’s running closer to the trip.</p>
-  </div>
-</section>
-
-<!-- ══════════════ ACTIVITIES ══════════════ -->
-<section class="section" id="activities">
-  <div class="wrap">
-    <span class="eyebrow reveal">Around Tremblant</span>
-    <h2 class="h2 reveal">Things to do, if we feel like it</h2>
-    <p class="lead reveal">The villa is about five minutes from the resort village per the listing. Drive times below are approximate — check maps on the day.</p>
-    <div class="act">
-      <!-- REPLACEABLE IMAGE SLOTS: drop a licensed photo URL into each act-img to replace the placeholder -->
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Pedestrian Village</div></div><div class="act-body"><h4>Tremblant Pedestrian Village</h4><p>The car-free resort village: restaurants, terrasses, shops and bars at the base of the mountain.</p><small>≈ 5–10 min drive</small></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Parc Plage</div></div><div class="act-body"><h4>Parc Plage / Beach Club</h4><p>Lakeside beach on Lac Tremblant for a swim and an afternoon beer.</p><small>≈ 10 min drive</small><br><span class="season">Expected seasonal availability — confirm closer to the trip</span></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Golf</div></div><div class="act-body"><h4>Golf</h4><p>Resort courses nearby — tee times can be arranged through the concierge.</p><small>≈ 10–15 min drive</small></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Gondola</div></div><div class="act-body"><h4>Scenic Gondola</h4><p>Ride to the summit for the full Laurentians panorama.</p><small>From the village</small><br><span class="season">Expected seasonal availability — confirm closer to the trip</span></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Hiking</div></div><div class="act-body"><h4>Hiking</h4><p>Summit and forest trails right off the resort — easy to strenuous.</p><small>On the mountain</small></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Ziplining</div></div><div class="act-body"><h4>Ziplining</h4><p>Summit-to-village zipline runs over the resort.</p><small>From the village</small><br><span class="season">Expected seasonal availability — confirm closer to the trip</span></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Kayak & Lake</div></div><div class="act-body"><h4>Kayaking & Lake Time</h4><p>Paddle Lac Tremblant or just post up on the water.</p><small>≈ 10 min drive</small></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Mountain Biking</div></div><div class="act-body"><h4>Mountain Biking</h4><p>Cross-country and downhill trails around the resort.</p><small>On the mountain</small><br><span class="season">Expected seasonal availability — confirm closer to the trip</span></div></div>
-      <div class="act-card reveal"><div class="act-img"><div class="img-fallback">Photo slot — Food & Drinks</div></div><div class="act-body"><h4>Restaurants & Cocktail Bars</h4><p>Village dining from casual to steakhouse — reservations via the concierge.</p><small>In the village</small></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ MONDAY ══════════════ -->
-<section class="section day" id="mon">
-  <div class="wrap">
-    <div class="day-grid">
-      <div>
-        <span class="eyebrow reveal">Monday · September 7</span>
-        <h2 class="h2 reveal">Head Home</h2>
-        <p class="lead reveal">Pack up, check out of the villa by 11:00 AM, and the private van runs back to <strong>Montréal–Trudeau (YUL)</strong>. The drive is about two hours and varies with traffic.</p>
-        <div class="mini-card reveal">
-          <b>Recommended Departure</b>
-          <p>Book <strong>late-morning, midday or afternoon</strong> Monday flights unless the van plan is specifically arranged around an earlier one. Leave time for the drive, traffic, bags, security and international-travel delays.</p>
+        <div class="thumbs">
+          <a href="#" data-lb-t><img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_166645556.jpeg" alt="Villa exterior" referrerpolicy="no-referrer"></a>
+          <a href="#" data-lb-t><img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315261.jpeg" alt="Great room and dining" referrerpolicy="no-referrer"></a>
+          <a href="#" data-lb-t><img src="https://gallery.streamlinevrs.com/units-gallery/00/08/FF/image_165315282.jpeg" alt="Living room with pool table" referrerpolicy="no-referrer"></a>
         </div>
+        <a class="btn" href="https://www.tremblantliving.ca/property/villa-panorama-tremblant/" target="_blank" rel="noopener">View the Listing</a>
       </div>
-      <div>
-        <div class="chips reveal" style="margin-top:0">
-          <span>Early-ish wake-up</span><span>Pack</span><span>Check out by 11 AM</span>
-          <span>Private van to YUL</span><span>~2 hr drive</span><span>Fly home</span>
-        </div>
-        <details class="acc reveal">
-          <summary>Why not an early flight?</summary>
-          <div class="acc-in">Tremblant → YUL is roughly two hours before you reach the terminal, so a 9 AM flight would mean a 5 AM van. Book midday or later.</div>
-        </details>
-      </div>
-    </div>
+    </article>
   </div>
-</section>
 
-<!-- ══════════════ LOGISTICS ══════════════ -->
-<section class="section" id="logistics">
-  <div class="wrap">
-    <span class="eyebrow reveal">Travel Logistics</span>
-    <h2 class="h2 reveal">The details</h2>
-    <div class="dash">
-      <div class="reveal"><b>Arrival Airport</b><h4>YUL</h4><p>Montréal–Trudeau International. ~26 min from the city house.</p></div>
-      <div class="reveal"><b>City Stay</b><h4>Hotel Suites</h4><p>414 Rue Saint-Sulpice, Old Montréal · Sept 3–5 · check-in from 4 PM.</p></div>
-      <div class="reveal"><b>Mountain Stay</b><h4>Villa Panorama</h4><p>425 Chemin de Cassiopée, Mont-Tremblant · Sept 5–7.</p></div>
-      <div class="reveal"><b>Transportation</b><h4>Handled</h4><p>Airport pickups, private van to Tremblant, and the Monday return to YUL.</p></div>
-    </div>
-    <div class="dash" style="margin-top:.9rem">
-      <div class="reveal"><b>Flight List</b><p>Posted once everyone books. Send Keegan your arrival and departure times.</p></div>
-      <div class="reveal"><b>Pickup Groups</b><p>Van assignments will be added here.</p></div>
-      <div class="reveal"><b>Driver Contact</b><p>Shared before the trip.</p></div>
-      <div class="reveal"><b>Departure Times</b><p>Exact Saturday and Monday van times will be confirmed here.</p></div>
-    </div>
+  <div class="times">
+    <div><b>Fly Into</b><span>YUL · Thu 9/3, early</span></div>
+    <div><b>Hotel Check-in</b><span>Thu 4:00 PM</span></div>
+    <div><b>Villa Check-out</b><span>Mon 11:00 AM</span></div>
+    <div><b>Fly Home</b><span>Mon 9/7, midday+</span></div>
   </div>
-</section>
-
-<!-- ══════════════ MAPS ══════════════ -->
-<section class="section" id="maps">
-  <div class="wrap">
-    <span class="eyebrow reveal">Maps</span>
-    <h2 class="h2 reveal">Every spot on the trip</h2>
-    <div class="maps">
-      <div class="map-card reveal"><iframe title="Map: Montréal–Trudeau International Airport (YUL)" loading="lazy" src="https://maps.google.com/maps?q=Montr%C3%A9al%E2%80%93Trudeau+International+Airport&output=embed"></iframe><p><b>YUL — Montréal–Trudeau Intl.</b> · Fly in Thursday, fly out Monday</p></div>
-      <div class="map-card reveal"><iframe title="Map: the hotel suites in Old Montréal" loading="lazy" src="https://maps.google.com/maps?q=414+Rue+Saint-Sulpice,+Montr%C3%A9al,+QC+H2Y+2V5&output=embed"></iframe><p><b>The hotel suites</b> · 414 Rue Saint-Sulpice, Old Montréal</p></div>
-      <div class="map-card reveal"><iframe title="Map: Casino de Montréal" loading="lazy" src="https://maps.google.com/maps?q=Casino+de+Montr%C3%A9al&output=embed"></iframe><p><b>Casino de Montréal</b> · Île Notre-Dame, short cab from Old Montréal</p></div>
-      <div class="map-card reveal"><iframe title="Map: Villa Panorama, Mont-Tremblant" loading="lazy" src="https://maps.google.com/maps?q=425+Chemin+de+Cassiop%C3%A9e,+Mont-Tremblant,+QC&output=embed"></iframe><p><b>Villa Panorama 425</b> · 425 Chemin de Cassiopée, Mont-Tremblant</p></div>
-      <div class="map-card reveal"><iframe title="Map: Tremblant pedestrian village" loading="lazy" src="https://maps.google.com/maps?q=Tremblant+Pedestrian+Village,+Mont-Tremblant&output=embed"></iframe><p><b>Tremblant Pedestrian Village</b> · restaurants, bars, gondola</p></div>
-      <div class="map-card reveal"><iframe title="Map: Parc Plage, Mont-Tremblant" loading="lazy" src="https://maps.google.com/maps?q=Parc+Plage,+Mont-Tremblant&output=embed"></iframe><p><b>Parc Plage</b> · the beach on Lac Tremblant</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ PACKING ══════════════ -->
-<section class="section" id="packing">
-  <div class="wrap">
-    <span class="eyebrow reveal">Packing List</span>
-    <h2 class="h2 reveal">What to bring</h2>
-    <div class="check" data-store="pack">
-      <label><input type="checkbox"><span>Passport</span></label>
-      <label><input type="checkbox"><span>Driver’s license</span></label>
-      <label><input type="checkbox"><span>Flight confirmation</span></label>
-      <label><input type="checkbox"><span>Swimsuit</span></label>
-      <label><input type="checkbox"><span>Walking shoes (Old Montréal is cobblestone)</span></label>
-      <label><input type="checkbox"><span>Nice outfit for Montréal nights</span></label>
-      <label><input type="checkbox"><span>Casual clothes for Tremblant</span></label>
-      <label><input type="checkbox"><span>Light jacket for mountain evenings</span></label>
-      <label><input type="checkbox"><span>Pool clothes</span></label>
-      <label><input type="checkbox"><span>Golf clothes (if golfing)</span></label>
-      <label><input type="checkbox"><span>Golf clubs — optional, rentals available</span></label>
-      <label><input type="checkbox"><span>Sunglasses</span></label>
-      <label><input type="checkbox"><span>Toiletries</span></label>
-      <label><input type="checkbox"><span>Phone charger</span></label>
-      <label><input type="checkbox"><span>Portable battery</span></label>
-      <label><input type="checkbox"><span>Medications</span></label>
-      <label><input type="checkbox"><span>Reusable water bottle</span></label>
-      <label><input type="checkbox"><span>Check the weather before you pack</span></label>
-    </div>
-    <p class="note reveal">Early September in Québec: warm days, cool mountain nights.</p>
-  </div>
-</section>
-
-<!-- ══════════════ BEFORE YOU GO ══════════════ -->
-<section class="section" id="before">
-  <div class="wrap">
-    <span class="eyebrow reveal">Group Checklist</span>
-    <h2 class="h2 reveal">Before You Go</h2>
-    <p class="lead reveal">Your checkmarks save in your browser — no login, no app.</p>
-    <div class="check" data-store="ready">
-      <label><input type="checkbox"><span>Flight booked</span></label>
-      <label><input type="checkbox"><span>Passport ready (check the expiration date)</span></label>
-      <label><input type="checkbox"><span>Arrival time sent to Keegan</span></label>
-      <label><input type="checkbox"><span>Departure time sent to Keegan</span></label>
-      <label><input type="checkbox"><span>Dietary restrictions submitted</span></label>
-      <label><input type="checkbox"><span>Drink preferences submitted</span></label>
-      <label><input type="checkbox"><span>Golf interest submitted</span></label>
-      <label><input type="checkbox"><span>Activity interest submitted</span></label>
-      <label><input type="checkbox"><span>Airport transportation confirmed</span></label>
-      <label><input type="checkbox"><span>Final payment completed</span></label>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ FINAL CTA ══════════════ -->
-<section class="cta" id="links">
-  <div class="wrap">
-    <span class="eyebrow reveal" style="justify-content:center">September 3–7, 2026</span>
-    <h2 class="reveal">Book your flight, boys.</h2>
-    <p class="reveal">Arrive Thursday, September 3. Head home Monday, September 7. The suites and the villa are booked, the vans are arranged, and the house will be stocked before we arrive. All you need is a flight.</p>
-    <div class="cta-btns reveal">
-      <a class="btn" href="https://vrbo.onelink.me/ItNz/57d9bn6y" target="_blank" rel="noopener">View the Hotel Suites</a>
-      <a class="btn" href="https://www.tremblantliving.ca/property/villa-panorama-tremblant/" target="_blank" rel="noopener">View Villa Panorama</a>
-      <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Montr%C3%A9al+Bachelor+Weekend&dates=20260903/20260908&details=Two+nights+in+Old+Montr%C3%A9al,+two+nights+at+Villa+Panorama,+Mont-Tremblant.+Fly+into+YUL+Thursday+Sept+3.&location=Montr%C3%A9al,+QC,+Canada" target="_blank" rel="noopener">Add Dates to Calendar</a>
-      <a class="btn ghost" href="mailto:keesturgtech@gmail.com?subject=Flight%20Details%20%E2%80%94%20Montr%C3%A9al%20Bachelor%20Weekend&body=Name%3A%0AArrival%20flight%20%2B%20time%3A%0ADeparture%20flight%20%2B%20time%3A">Submit Flight Details</a>
-    </div>
-  </div>
-</section>
+</div>
 
 <footer>
-  <p>Details may change. Property facts and photos are from the official VRBO and Tremblant Living listings; activity availability for September 2026 will be confirmed closer to the trip.</p>
-  <p>Montréal Bachelor Weekend · September 3–7, 2026</p>
+  <div class="wrap">
+    <h3>Book your flight, boys.</h3>
+    <p>Want more? Full guide — itinerary, maps, packing list:<br>
+    <a class="guide" href="full.html">See the full guide</a></p>
+    <p class="fine">Photos from the official VRBO and Tremblant Living listings. Details may change.</p>
+  </div>
 </footer>
 
-<!-- ══════════════ QUICK LINKS FAB ══════════════ -->
-<button class="fab" id="fab" aria-label="Quick links" aria-expanded="false">☰</button>
-<div class="fab-panel" id="fabPanel" role="menu">
-  <a href="https://vrbo.onelink.me/ItNz/57d9bn6y" target="_blank" rel="noopener">Open the Hotel Suites (VRBO) <span>↗</span></a>
-  <a href="https://www.tremblantliving.ca/property/villa-panorama-tremblant/" target="_blank" rel="noopener">Open Villa Panorama <span>↗</span></a>
-  <a href="https://maps.google.com/maps?q=Montr%C3%A9al%E2%80%93Trudeau+International+Airport" target="_blank" rel="noopener">Open Airport Map <span>↗</span></a>
-  <a href="#" data-placeholder="group-chat">Open Group Chat <span>soon</span></a>
-  <a href="#glance">Overview <span>→</span></a>
-  <a href="#stay">Where We’re Staying <span>→</span></a>
-  <a href="#logistics">Logistics <span>→</span></a>
-</div>
-
-<!-- ══════════════ LIGHTBOX ══════════════ -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <button class="lb-btn lb-x" id="lbClose" aria-label="Close">✕</button>
-  <img id="lbImg" src="" alt="Property photo, full screen" referrerpolicy="no-referrer">
-  <div class="lb-bar">
-    <button class="lb-btn" id="lbPrev" aria-label="Previous photo">←</button>
-    <span id="lbCount"></span>
-    <button class="lb-btn" id="lbNext" aria-label="Next photo">→</button>
-  </div>
-</div>
-
+<div class="lb" id="lb"><img id="lbImg" src="" alt="Photo, full screen" referrerpolicy="no-referrer"></div>
 <script>
-/* ---------- storage (safe: falls back to memory if localStorage unavailable) ---------- */
-var memStore = {};
-function sGet(k){ try { return localStorage.getItem(k); } catch(e){ return memStore[k] || null; } }
-function sSet(k,v){ try { localStorage.setItem(k,v); } catch(e){ memStore[k]=v; } }
-
-/* ---------- image fallback ---------- */
-function imgFail(img, label){
-  var d = document.createElement('div');
-  d.className = 'img-fallback';
-  d.textContent = label || 'Photo — see the listing';
-  img.replaceWith(d);
-}
-
-/* ---------- countdown ---------- */
-(function(){
-  var target = new Date(2026, 8, 3, 0, 0, 0).getTime(); // Sept 3, 2026 local time
-  var d=document.getElementById('cd'),h=document.getElementById('ch'),m=document.getElementById('cm'),s=document.getElementById('cs');
-  function tick(){
-    var diff = target - Date.now();
-    if (diff <= 0){ d.textContent='0'; h.textContent='0'; m.textContent='0'; s.textContent='0'; return; }
-    d.textContent = Math.floor(diff/864e5);
-    h.textContent = Math.floor(diff%864e5/36e5);
-    m.textContent = Math.floor(diff%36e5/6e4);
-    s.textContent = Math.floor(diff%6e4/1e3);
-  }
-  tick(); setInterval(tick, 1000);
-})();
-
-/* ---------- nav show after hero ---------- */
-(function(){
-  var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('show', window.scrollY > window.innerHeight * 0.55); }
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-})();
-
-/* ---------- scroll reveals ---------- */
-(function(){
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('on');}); return; }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target);} });
-  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-  els.forEach(function(e){ io.observe(e); });
-})();
-
-/* ---------- checklists ---------- */
-document.querySelectorAll('[data-store]').forEach(function(group){
-  var key = 'mtl26-' + group.getAttribute('data-store');
-  var boxes = group.querySelectorAll('input[type=checkbox]');
-  var saved = [];
-  try { saved = JSON.parse(sGet(key) || '[]'); } catch(e){}
-  boxes.forEach(function(b, i){
-    if (saved[i]) b.checked = true;
-    b.addEventListener('change', function(){
-      var state = Array.prototype.map.call(boxes, function(x){ return x.checked ? 1 : 0; });
-      sSet(key, JSON.stringify(state));
-    });
-  });
-});
-
-/* ---------- quick links fab ---------- */
-(function(){
-  var fab = document.getElementById('fab'), panel = document.getElementById('fabPanel');
-  fab.addEventListener('click', function(){
-    var open = panel.classList.toggle('open');
-    fab.setAttribute('aria-expanded', open);
-    fab.textContent = open ? '✕' : '☰';
-  });
-  panel.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      if (a.getAttribute('data-placeholder')) { ev.preventDefault(); a.querySelector('span').textContent = 'link coming'; return; }
-      panel.classList.remove('open'); fab.textContent='☰'; fab.setAttribute('aria-expanded','false');
-    });
-  });
-})();
-
-/* ---------- lightbox with keyboard + swipe ---------- */
-(function(){
-  var imgs = Array.prototype.slice.call(document.querySelectorAll('img[data-lb]'));
-  var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), lbCount = document.getElementById('lbCount');
-  var idx = 0;
-  function show(i){
-    idx = (i + imgs.length) % imgs.length;
-    lbImg.src = imgs[idx].src;
-    lbImg.alt = imgs[idx].alt || 'Property photo';
-    lbCount.textContent = (idx+1) + ' / ' + imgs.length;
-  }
-  function open(i){ show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; }
-  function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
-  imgs.forEach(function(im, i){
-    im.style.cursor = 'zoom-in';
-    im.addEventListener('click', function(){ open(i); });
-  });
-  document.getElementById('lbClose').addEventListener('click', close);
-  document.getElementById('lbPrev').addEventListener('click', function(){ show(idx-1); });
-  document.getElementById('lbNext').addEventListener('click', function(){ show(idx+1); });
-  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
-  document.addEventListener('keydown', function(e){
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show(idx-1);
-    if (e.key === 'ArrowRight') show(idx+1);
-  });
-  var tx = null;
-  lb.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; }, {passive:true});
-  lb.addEventListener('touchend', function(e){
-    if (tx === null) return;
-    var dx = e.changedTouches[0].clientX - tx;
-    if (Math.abs(dx) > 48) show(idx + (dx < 0 ? 1 : -1));
-    tx = null;
-  }, {passive:true});
-})();
+var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+function openLb(src){lbImg.src=src;lb.classList.add('open');}
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.querySelectorAll('[data-lb]').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){openLb(i.src);});});
+document.querySelectorAll('[data-lb-t]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openLb(a.querySelector('img').src);});});
 </script>
 </body>
 </html>
